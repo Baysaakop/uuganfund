@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Grid, Layout, Menu } from 'antd'
 import Head from 'next/head'
 import CustomMenu from './CustomMenu'
@@ -6,7 +6,9 @@ import CustomMenu from './CustomMenu'
 const { Header, Content, Footer } = Layout
 const { useBreakpoint } = Grid
 
-const CustomLayout = ({ children }) => {
+type LayoutProps = {children?: ReactNode}
+
+const CustomLayout = ({ children }: LayoutProps) => {
 
     const screens = useBreakpoint()
 
